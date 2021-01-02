@@ -5,7 +5,7 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
 const indexRouter = require("./routes/index");
-const contactsRouter = require("./routes/contacts");
+const downloadsRouter = require("./routes/downloads");
 const mongo = require("./mongodb_Atlas/connection");
 
 const app = express();
@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-app.use("/contacts", contactsRouter);
+app.use("/downloads", downloadsRouter);
 
 app.use(function (req, res, next) {
   next(createError(404));

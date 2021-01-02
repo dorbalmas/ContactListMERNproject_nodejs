@@ -4,7 +4,7 @@ const config = require("config");
 mongoose.connect(
   `mongodb+srv://koko:${config.get(
     "password"
-  )}@cluster0-rv00q.gcp.mongodb.net/contacts_list?retryWrites=true&w=majority`,
+  )}@cluster0.rv00q.gcp.mongodb.net/json_translator?retryWrites=true&w=majority`,
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
